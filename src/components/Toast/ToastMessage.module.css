@@ -1,0 +1,78 @@
+.container {
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:300px;
+}
+.toast {
+    position:relative;
+    top:0;
+    right:-340px;
+    width:300px;
+    background-color:#fff;
+    padding:15px 20px;
+    box-sizing:border-box;
+    box-shadow:2px 2px 7px 1px #e6e6e6;
+    opacity:0;
+    cursor:pointer;
+}
+
+.toast::after {
+    content: '\2573';
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size:8px;
+}
+
+.toast.success {
+    border-left:5px solid rgb(101, 214, 165);
+    opacity:1;
+    animation-name:animate;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode:forwards;
+}
+
+.toast.error {
+    border-left:5px solid red;
+    opacity:1;
+    animation-name:animate;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode:forwards;
+}
+
+.toast.warn {
+    border-left:5px solid orange;
+    opacity:1;
+    animation-name:animate;
+    animation-duration:2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode:forwards;
+}
+
+@keyframes animate {
+    0% {
+       right:-340px; 
+    }
+    5% {
+        right:30px;
+    }
+    10% {
+        right:20px;
+    }
+    100% {
+        right:20px;
+    }
+}
