@@ -1,20 +1,20 @@
 import React, {useState} from 'react';
-import { ToastMessage } from './components/Toast/ToastMessage';
+import { ToastMessage, toast } from './components/Toast/ToastMessage';
 import './App.css';
 
 function App() {
   const [toasts, setToasts] = useState([]);
 
   const handleOnSuccess = () => {
-    setToasts([...toasts, {text: 'Hello this is success message', condition: 'success'}]);
+    toast.success(toasts, setToasts, 'This is Success message.');
   }
 
   const handleOnError = () => {
-    setToasts([...toasts, {text: 'This is Error message', condition: 'error'}]);
+    toast.error(toasts, setToasts, 'This is Error message.');
   }
 
   const handleOnWarn = () => {
-    setToasts([...toasts, {text: 'This is Warning message', condition: 'warn'}]);
+    toast.warn(toasts, setToasts, 'This is Warning message.');
   }
 
   return (

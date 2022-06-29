@@ -44,3 +44,15 @@ export function ToastMessage({ toasts, setToasts }) {
         </div>
     )
 }
+
+export const toast = {
+    success: function(values, setValues, text) {
+      setValues([...values, {text, condition: 'success'}]);
+    },
+    error: function(values, setValues, text) {
+      setValues([...values, {text, condition: 'error'}]);
+    },
+    warn: function(values, setValues, text) {
+      setValues([...values, {text, condition: 'warn'}]);
+    },
+}
