@@ -17,7 +17,7 @@ npm install
 npm start
 ```
 
-# Deployed
+# Deployment
 - Deployed on netlify as sample. Visit [here](https://toast-component.netlify.app/).
 
 # Development Environment
